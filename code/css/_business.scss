@@ -1,0 +1,34 @@
+.business {
+  @include pc-inner;
+  @include section-padding;
+  .business__item {
+    @include flex;
+    .business__content {
+      box-sizing: border-box;
+      width: 30%;
+      padding: 2em;
+      line-height: 1.5em;
+      text-align: center;
+      background-color: rgb(235, 235, 235);
+      box-shadow: 5px 5px 10px;
+      .business__content-image {
+        width: 50%;
+        padding-bottom: 20px;
+        margin: 0 auto;
+      }
+      .business__content-title {
+        padding-bottom: 20px;
+      }
+    }
+  }
+  @include tab {
+    @include sp-inner;
+    .business__item{
+      display: block;
+      .business__content {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.header{
+  @include flex;
+  height: 70px;
+}
+
+.header-logo{
+  padding-left: 40px;
+  white-space: nowrap;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header-nav-item{
+  @include flex;
+  flex-wrap: wrap;
+  @include tab{
+    width: 350px;
+  }
+  @media (max-width: 620px) {
+    position: absolute;
+    left: -100vw;
+    height: 100vh;
+    width: 100%;
+    transition: all 1s;
+    color:#fff;
+    background-color: rgba(0,0,0,0.7);
+  }
+}
+
+.header-nav-list{
+  white-space: nowrap;
+  padding: 5px 40px 5px 0;
+  font-size: 1vw;
+  @media (max-width: 620px) {
+    text-align: center;
+    padding-right: 0;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+}
+
+.header-nav-link:hover{
+  color: black;
+  text-decoration: underline;
+  transition: .3s;
+}
+
+// 🍔
+.open, .close, .back{
+  display: none;
+  @media (max-width: 620px) {
+    display: block;
+  }
+}
+
+.open{
+  position: absolute;
+  left: 0;
+}
+
+.input-checkbox{
+  display: none;
+  position: absolute;
+  left: -50vw;
+  @media (max-width: 620px) {
+    display: block;
+  }
+}
+
+.input-checkbox:checked ~ .header-nav-item{
+  top: 0;
+  left: 0;
+}
+
+.input-checkbox:checked ~ .back{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}

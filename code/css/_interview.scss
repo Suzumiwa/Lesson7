@@ -1,0 +1,30 @@
+.interview{
+  position: relative;
+  height: 450px;
+  background: url(../img/interview.jpg) no-repeat center/cover;
+  .interview__content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    padding: 40px 80px;
+    background: #fff;
+    border: 2px solid #444;
+    .interview__title{
+      text-align: center;
+    }
+    .interview__text{
+      text-align: center;
+      padding-bottom: 40px;
+    }
+    .interview__more{
+      text-align: center;
+    }
+    @include tab{
+      box-sizing: border-box;
+      width: 90%;
+    }
+  }
+}
+

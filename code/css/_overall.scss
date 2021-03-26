@@ -1,0 +1,89 @@
+$tab: 780px; // タブレット
+$sp: 480px; // スマートフォン
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin pc-inner {
+  width: 65%;
+  margin: 0 auto;
+}
+
+@mixin sp-inner {
+  width: 90%;
+}
+
+@mixin section-padding {
+  padding: 40px 0;
+}
+
+@mixin section__title-padding {
+  padding-bottom: 40px;
+}
+
+.overall {
+  color: #555;
+}
+
+.section-title {
+  @include section__title-padding;
+  font-size: 2.5vw;
+  @include tab {
+    font-size: 30px;
+  }
+}
+
+.more-button {
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  padding: 0.8em 1em;
+  border: 1px solid aqua;
+  background-color: #fff;
+}
+
+// .more-button::before{
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+//   content: '';
+//   width: 120%;
+//   height: 100%;
+//   background: rgb(86, 102, 245);
+//   transform-origin: right top;
+//   transform: skewX(-30deg) scale(0, 1);
+//   transition: transform .3s;
+// }
+
+// .more-button:hover{
+//   color: aqua;
+// }
+
+.more-button:hover::before {
+  transform-origin: left top;
+  transform: skewX(-30deg) scale(1, 1);
+}
+
+// footer
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+}

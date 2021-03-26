@@ -1,0 +1,42 @@
+.flex{
+  @include flex;
+  @include tab{
+    display: block;
+  }
+}
+
+.company{
+  position: relative;
+  height: 300px;
+  width: 50%;
+  background: url(../img/company.jpg) no-repeat center/cover;
+  @include tab{
+    width: 100%;
+  }
+}
+
+.recruit{
+  position: relative;
+  height: 300px;
+  width: 50%;
+  background: url(../img/recruit.jpg) no-repeat center/cover;
+  @include tab{
+    width: 100%;
+  }
+}
+
+.flex__title{
+  position: absolute;
+  padding: 20px 10px;
+}
+
+.flex__button{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.flex__button:hover{
+  cursor: pointer;
+  transition: .5s;
+}

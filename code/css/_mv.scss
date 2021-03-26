@@ -1,0 +1,15 @@
+.mv{
+  @include flex;
+  height: 450px;
+  background: url(../img/mv.jpg) no-repeat center/cover;
+}
+
+.mv-logo{
+  margin: 0 auto;
+  color: red;
+  font-size: 5vw;
+  font-weight: bold;
+  @media (max-width: (800px)) {
+    font-size: 8vw;
+  }
+}
